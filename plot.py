@@ -81,23 +81,26 @@ def analyze_and_plot_results(results_csv_path, history_csv_path,
         xmax = len(y_pred)
 
     # Compute anomaly scores.
-    errors, log_likelihoods, anomalies = compute_scores(y_test, y_pred)
-
+    #errors, log_likelihoods, anomalies = compute_scores(y_test, y_pred)
+    errors = compute_scores(y_test, y_pred)
+    
     # Clip data
     y_true = y_true[xmin:xmax]
     timestamps = timestamps[xmin:xmax]
     y_test = y_test[xmin:xmax]
     y_pred = y_pred[xmin:xmax]
     errors = errors[xmin:xmax]
-    log_likelihoods = log_likelihoods[xmin:xmax]
-    anomalies['high'] = anomalies['high'][xmin:xmax]
-    anomalies['medium'] = anomalies['medium'][xmin:xmax]
+    #log_likelihoods = log_likelihoods[xmin:xmax]
+    #anomalies['high'] = anomalies['high'][xmin:xmax]
+    #anomalies['medium'] = anomalies['medium'][xmin:xmax]
 
     # Plot data, predictions, and anomaly scores.
     output_file = results_csv_path[:-4] + '.png'
-    plot_anomalies(timestamps, y_true, y_test, y_pred, errors, log_likelihoods,
-                   anomalies, output_file)
-
+    #plot_anomalies(timestamps, y_true, y_test, y_pred, errors, log_likelihoods,
+    #               anomalies, output_file)
+    
+    plot_anomalies(timestamps, y_true, y_test, y_pred, errors, output_file)
+    
     # Plot training history.
     df = pd.read_csv(history_csv_path)
     metrics = df.columns.values
