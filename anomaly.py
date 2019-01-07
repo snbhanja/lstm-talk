@@ -1,5 +1,5 @@
 import numpy as np
-from nupic.algorithms.anomaly_likelihood import AnomalyLikelihood
+#from nupic.algorithms.anomaly_likelihood import AnomalyLikelihood
 
 
 def compute_scores(y_test, y_pred, normalize=False):
