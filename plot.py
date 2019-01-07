@@ -12,7 +12,7 @@ sns.set_context("talk", rc={'lines.linewidth': 2.0})
 
 
 def plot_anomalies(timestamps, y_true, y_test, y_pred, errors, log_likelihoods,
-                   anomalies, output_file):
+                   output_file):
     N = len(timestamps)
     y_max = max(y_true) * 1.10
     bar_width = 100
