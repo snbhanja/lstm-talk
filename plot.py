@@ -28,9 +28,9 @@ def plot_anomalies(timestamps, y_true, y_test, y_pred, errors,
 
     ax[0].set_title("Actual Signal")
     ax[0].plot(y_true, 'blue')
-    ax[0].bar(range(N), y_max * anomalies['high'], bar_width, color='red',
-              alpha=0.5, align='center')
-    ax[0].set_ylim(0, y_max)
+    #ax[0].bar(range(N), y_max * anomalies['high'], bar_width, color='red',
+    #          alpha=0.5, align='center')
+    #ax[0].set_ylim(0, y_max)
 
     ax[1].set_title("Normalized Signal")
     ax[1].plot(y_pred, 'purple')
@@ -45,9 +45,9 @@ def plot_anomalies(timestamps, y_true, y_test, y_pred, errors,
     ax[4].plot(log_likelihoods, 'black')
 
     # Plot anomalies
-    ax[4].bar(range(N), anomalies['high'], bar_width, color='red', alpha=0.5,
-              align='center')
-    ax[4].set_ylim(0, 1)
+    #ax[4].bar(range(N), anomalies['high'], bar_width, color='red', alpha=0.5,
+    #          align='center')
+    #ax[4].set_ylim(0, 1)
 
     plt.xlim(0, len(y_true))
     plt.tight_layout()
