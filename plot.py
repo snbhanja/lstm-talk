@@ -121,4 +121,4 @@ if __name__ == '__main__':
     results_csv_path = os.path.join(results_dir, 'nyc_taxi.csv')
     history_csv_path = os.path.join(results_dir, 'history.csv')
     analyze_and_plot_results(results_csv_path, history_csv_path,
-                             show_plots=False, xmin=xmin)
+                             show_plots=True, xmin=xmin)
