@@ -41,8 +41,8 @@ def plot_anomalies(timestamps, y_true, y_test, y_pred, errors,
     ax[3].set_title("Prediction Error")
     ax[3].plot(errors, 'red')
 
-    ax[4].set_title("Anomaly Log Likelihood")
-    ax[4].plot(log_likelihoods, 'black')
+    #ax[4].set_title("Anomaly Log Likelihood")
+    #ax[4].plot(log_likelihoods, 'black')
 
     # Plot anomalies
     #ax[4].bar(range(N), anomalies['high'], bar_width, color='red', alpha=0.5,
