@@ -11,7 +11,7 @@ python run.py
 ```
 
 ## Modifications done:
-Removed Nupic functions for anopmaly score.
+Removed Nupic functions for anomaly score.
 
 ## Slides
 
